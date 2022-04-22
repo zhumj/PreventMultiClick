@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".aop.AOPActivity">
+
+    <TextView
+        android:id="@+id/tvText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text=""
+        android:padding="8dp"
+        android:scrollbars="vertical"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnAOP1"/>
+
+    <Button
+        android:id="@+id/btnAOP1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="清除"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/btnAOP2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvText"/>
+
+    <Button
+        android:id="@+id/btnAOP2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="按钮2"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/btnAOP1"
+        app:layout_constraintRight_toLeftOf="@+id/btnAOP3"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAOP1"
+        app:layout_constraintTop_toTopOf="@+id/btnAOP1"/>
+
+    <Button
+        android:id="@+id/btnAOP3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="按钮3"
+        android:layout_marginStart="10dp"
+        app:layout_constraintLeft_toRightOf="@+id/btnAOP2"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/btnAOP1"
+        app:layout_constraintTop_toTopOf="@+id/btnAOP1"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,31 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+//plugins {
+//    id 'com.android.application' version '7.1.1' apply false
+//    id 'com.android.library' version '7.1.1' apply false
+//    id 'io.github.wurensen' version '2.0.4' apply false
+//}
+
+buildscript {
+    repositories {
+        google()
+        // 已发布到mavenCentral仓库
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.1.1'
+        // aspectj插件
+        classpath 'io.github.wurensen:gradle-android-plugin-aspectjx:2.0.14'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
